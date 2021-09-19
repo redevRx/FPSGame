@@ -1,143 +1,95 @@
 Using pre-set license
 Built from '2021.1/release' branch; Version is '2021.1.0f1 (61a549675243) revision 6399305'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 22454.1000; Version 2009; 64bit' Language: 'en' Physical Memory: 7983 MB
+OS: 'Windows 10 Education; OS build 19043.1237; Version 2009; 64bit' Language: 'en' Physical Memory: 16328 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2021.1.0f1\Editor\Unity.exe
+D:\Unity\2021.1.0f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/Tutotials/gameming/fps
+C:/Users/aphinan/Desktop/games/FPSGame
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55954
-Successfully changed project path to: D:/Tutotials/gameming/fps
-D:/Tutotials/gameming/fps
+64416
+Successfully changed project path to: C:/Users/aphinan/Desktop/games/FPSGame
+C:/Users/aphinan/Desktop/games/FPSGame
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 108.97 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 105.52 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.0f1 (61a549675243)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.0f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Tutotials/gameming/fps/Assets
+[Subsystems] Discovering subsystems at path D:/Unity/2021.1.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/aphinan/Desktop/games/FPSGame/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: Intel(R) UHD Graphics 620 (ID=0x5917)
-    Vendor:   Intel
-    VRAM:     3991 MB
-    Driver:   30.0.100.9686
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f82)
+    Vendor:   NVIDIA
+    VRAM:     3962 MB
+    Driver:   27.21.14.5709
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.0f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56720
+Mono path[0] = 'D:/Unity/2021.1.0f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2021.1.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'D:/Unity/2021.1.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56836
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002950 seconds.
+Register platform support module: D:/Unity/2021.1.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001243 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 108.04 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 103.54 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.246 seconds
+- Completed reload, in  1.099 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005097 seconds.
+Registered in 0.003200 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 155.94 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 101.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.340 seconds
+- Completed reload, in  1.077 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3988 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 157.3 MB.
-System memory in use after: 155.1 MB.
+Unloading 3989 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 158.0 MB.
+System memory in use after: 155.8 MB.
 
-Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 4408.
-Total: 7.305400 ms (FindLiveObjects: 0.623100 ms CreateObjectMapping: 0.493700 ms MarkObjects: 4.088400 ms  DeleteObjects: 2.097900 ms)
+Unloading 49 unused Assets to reduce memory usage. Loaded Objects now: 4409.
+Total: 12.141800 ms (FindLiveObjects: 0.774000 ms CreateObjectMapping: 0.731900 ms MarkObjects: 6.796000 ms  DeleteObjects: 3.836000 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/空/skin.bmp
-  artifactKey: Guid(1786631da9d24ef4da356a70500790b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/空/skin.bmp using Guid(1786631da9d24ef4da356a70500790b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5b60012c1f66c6554b317408e0b0a99') in 0.154527 seconds 
+  path: Assets/rua para blender/Materials/rua com faixada.mat
+  artifactKey: Guid(c28b9b2e7b437ea42bc0031afc87d81a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rua para blender/Materials/rua com faixada.mat using Guid(c28b9b2e7b437ea42bc0031afc87d81a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c19554eea0254609edaaf9c69e241ee3') in 0.244055 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000902 seconds.
-  path: Assets/空/tex/髪.png
-  artifactKey: Guid(5328c51118722634c94bf9db8ae0939f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/空/tex/髪.png using Guid(5328c51118722634c94bf9db8ae0939f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc11f09ff4fa80cdeb305c1945e73c2b') in 0.030772 seconds 
+  Time since last request: 0.000304 seconds.
+  path: Assets/rua para blender/Materials/render4.mat
+  artifactKey: Guid(96c2a03658a2d7443a47d7b607a490e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rua para blender/Materials/render4.mat using Guid(96c2a03658a2d7443a47d7b607a490e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df64a132888cd2285511f75512cbae20') in 0.009562 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000326 seconds.
-  path: Assets/空/toon_defo.bmp
-  artifactKey: Guid(a71df0fcdb02ead4caace1df17cb4723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/空/toon_defo.bmp using Guid(a71df0fcdb02ead4caace1df17cb4723) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58f2eb956c7dcefdfff65e6c0a1b642a') in 0.020557 seconds 
+  Time since last request: 0.000291 seconds.
+  path: Assets/rua para blender/Materials/render2.mat
+  artifactKey: Guid(82bd7d0d504cc8b44a443d3482e276b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rua para blender/Materials/render2.mat using Guid(82bd7d0d504cc8b44a443d3482e276b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68a19035146b06c6efcc74d589c4e10e') in 0.008928 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000471 seconds.
-  path: Assets/空/hair.bmp
-  artifactKey: Guid(eebcf9ab7e092ed499ab27a98dd66510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/空/hair.bmp using Guid(eebcf9ab7e092ed499ab27a98dd66510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d414114f989424e72ff09534b0ac302') in 0.022057 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000265 seconds.
-  path: Assets/空/tex/表情.png
-  artifactKey: Guid(098f1d520fcdaf7459abe005ea263ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/空/tex/表情.png using Guid(098f1d520fcdaf7459abe005ea263ca8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab85cc299634e495d11deae17eaca13b') in 0.047813 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000277 seconds.
-  path: Assets/空/tex/顔.png
-  artifactKey: Guid(b8585e81802eb424887abab00fc5408e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/空/tex/顔.png using Guid(b8585e81802eb424887abab00fc5408e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac347f829583fda7e55ef50e87c82fbb') in 0.093792 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000346 seconds.
-  path: Assets/空/tex/服.png
-  artifactKey: Guid(c9e6a00481ed5f64299858003fec7e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/空/tex/服.png using Guid(c9e6a00481ed5f64299858003fec7e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c33c8040fa676eef105b667db68987c2') in 0.032989 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 13.032388 seconds.
-  path: Assets/空/tex/Materials/服.mat
-  artifactKey: Guid(72b8d597a20f87241a3db81941e2f6ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/空/tex/Materials/服.mat using Guid(72b8d597a20f87241a3db81941e2f6ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd75bf99eef36c14f61063ffc3c135b9f') in 0.248874 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 38.013879 seconds.
-  path: Assets/空/Materials/hair.mat
-  artifactKey: Guid(600eb4ac5c180ef4193d15a2894a52a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/空/Materials/hair.mat using Guid(600eb4ac5c180ef4193d15a2894a52a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc0a9a2fbc54c87fa11aae81aa7fa595') in 0.020362 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000369 seconds.
-  path: Assets/空/Materials/skin.mat
-  artifactKey: Guid(d0f217337472f5c4785d4f9d05af614d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/空/Materials/skin.mat using Guid(d0f217337472f5c4785d4f9d05af614d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f308487f42ad78a5fa66b3e7f224a3d4') in 0.020269 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 159.730725 seconds.
-  path: Assets/Settings/UniversalRP-LowQuality.asset
-  artifactKey: Guid(a31e9f9f9c9d4b9429ed0d1234e22103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Settings/UniversalRP-LowQuality.asset using Guid(a31e9f9f9c9d4b9429ed0d1234e22103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10f05484e5205f20eeacc6ede35b1f17') in 0.026298 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000411 seconds.
-  path: Assets/Settings/UniversalRP-MediumQuality.asset
-  artifactKey: Guid(d847b876476d3d6468f5dfcd34266f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Settings/UniversalRP-MediumQuality.asset using Guid(d847b876476d3d6468f5dfcd34266f96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0011a48580a630a3dd7d1febde0bea89') in 0.010600 seconds 
+  Time since last request: 0.000259 seconds.
+  path: Assets/rua para blender/Materials/render.mat
+  artifactKey: Guid(53474d91d98464f4da7245c481e76209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/rua para blender/Materials/render.mat using Guid(53474d91d98464f4da7245c481e76209) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15937b76cfab84ee7b3ef5e1c7f2cf9f') in 0.011149 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
