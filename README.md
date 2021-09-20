@@ -5,25 +5,36 @@
 #### `พัชระ นาเสงี่ยม`
 
 -------------------------
-`Kasem Saikhuedong`
+`Kasem Saikhuedong` 
 <br>
 `Apinan Jigjug`
 <br>
-`Alonewindz But-in`
+`Sirimongkhon But-in`
 <br>
 `Warakorn Hasri`
 <br>
-`Champ Patipan`
+`Patipan Hanchai`
 
 -------------------------
 
 ### Project Assignment
 ```dart
-Kasem => Write script for game development
-Apinan => Map Designer for game development
-Alonewindz But-in => Map Designer and document design
-Warakorn Hasri => Document Design
-Champ Patipan => Map Designer and document design
+var kasem = new Kasem();
+kasem.wirteScriptGame();
+
+var apinan = new Apinan();
+apinan.mapDesigner();
+
+var sirimongkhon = new Sirimongkhon();
+sirimongkhon.mapDesigner();
+sirimongkhon.documentDesign();
+
+var warakorn = new Warakorn();
+warakorn.documentDesign();
+
+var patipan = new Patipan();
+patipan.mapDesigner();
+patipan.documentDesign();
 ```
 
 ### Git Working Flow For Game Development
