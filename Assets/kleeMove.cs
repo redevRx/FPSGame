@@ -5,28 +5,70 @@ using UnityEngine;
 public class kleeMove : MonoBehaviour
 {
 
-    private int movementspeed = 100;
+    [SerializeField] private float speed;
+     [SerializeField] private float walkSpeed;
+     [SerializeField] private float runSpeed;
+
+    [SerializeField] private bool isGraound;
+    [SerializeField] private bool groundCheckDistance;
+    [SerializeField] private LayerMask groundMask;
+
+    private Vector3 moveDirection;
+    private Vector3 veloCity;
+
+    //setting
+    private CharacterController characterController;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        characterController = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+
+        //call move 
+        Move();
+    }
+
+    private void Move() {
+        float moveZ = Input.GetAxis("Vertical");
+
+        moveDirection = new Vector3(0, 0, moveZ);
+
+        if (moveDirection != Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
         {
-            transform.Translate(Vector3.left * movementspeed * Time.deltaTime);
+            //walk
+            Walk();
         }
-        if (Input.GetKey(KeyCode.D))
+        else if (moveDirection != Vector3.zero && Input.GetKey(KeyCode.LeftShift))
         {
-            transform.Translate(Vector3.right * movementspeed * Time.deltaTime);
+            //run
+            Run();
         }
-        if (Input.GetKey(KeyCode.W))
+        else if (moveDirection == Vector3.zero)
         {
-            transform.Translate(Vector3.up * movementspeed * Time.deltaTime);
+            //idel
+            Idel();
         }
-      
+        //moveDirection *= walkSpeed;
+        moveDirection *= speed;
+
+        characterController.Move(moveDirection * Time.deltaTime);
+    }
+
+    private void Idel()
+    { }
+
+    private void Walk() 
+    {
+        speed = walkSpeed;
+    }
+
+    private void Run()
+    {
+        speed = runSpeed;
     }
 }
