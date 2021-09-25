@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.AI;
 
 public class EnemyManager : MonoBehaviour
@@ -14,6 +15,9 @@ public class EnemyManager : MonoBehaviour
 
     [Tooltip("For Zombierial")]
     [SerializeField] public float health = 100f;
+
+    public AudioSource audio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,10 +52,14 @@ public class EnemyManager : MonoBehaviour
     {
         health -= damang;
 
-        Debug.Log("Enemy Health :" + health);
+       // Debug.Log("Enemy Health :" + health);
 
         if (health <= 0)
         {
+            //new instance
+            audio = player.GetComponent<PlayerManager>().audio;
+
+            audio.Play();
             gameManager.enemyesAlive--;
             Destroy(gameObject);
         }

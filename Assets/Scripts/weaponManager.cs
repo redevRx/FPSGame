@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class weaponManager : MonoBehaviour
@@ -14,6 +15,8 @@ public class weaponManager : MonoBehaviour
 
 
     [SerializeField] public Animator playerAnimator;
+
+    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,7 @@ public class weaponManager : MonoBehaviour
         {
             playerAnimator.SetBool("isShooting", false);
             txtDamang.text = "";
+           // audio.Stop();
         }
 
 
@@ -41,6 +45,7 @@ public class weaponManager : MonoBehaviour
     {
 
         playerAnimator.SetBool("isShooting", true);
+        audio.Play();
 
 
         RaycastHit raycastHit;

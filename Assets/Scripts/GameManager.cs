@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     public Text roundServived;
 
 
-
     public void EndGame()
     {
         Time.timeScale = 0;
@@ -36,7 +35,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+    }
+
+
+    public void OnExit()
+    {
+        Application.Quit();
     }
 
     // Update is called once per frame

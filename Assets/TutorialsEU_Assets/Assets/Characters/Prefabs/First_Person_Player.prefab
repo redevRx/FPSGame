@@ -253,6 +253,7 @@ MonoBehaviour:
   damang: 100
   txtDamang: {fileID: 0}
   playerAnimator: {fileID: 3308283935566208020}
+  audio: {fileID: 0}
 --- !u!1 &2168140879310129477
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,6 +994,10 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  gameManager: {fileID: 0}
+  isPuaseGame: 0
+  puaseGame: {fileID: 0}
+  openSound: {fileID: 0}
   characterController: {fileID: 1554504927}
 --- !u!114 &307316095
 MonoBehaviour:

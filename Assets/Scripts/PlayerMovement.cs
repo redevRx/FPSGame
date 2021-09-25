@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -18,6 +19,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public Transform groundCheck;
     [SerializeField] public LayerMask groundMask;
 
+    public GameManager gameManager;
+    public bool isPuaseGame = false;
+    public GameObject puaseGame;
+
+
+    public AudioSource openSound;
+
     [SerializeField] public CharacterController characterController;
     // Start is called before the first frame update
     void Start()
@@ -28,14 +36,38 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        isPuaseGame = puaseGame.gameObject.activeSelf;
+
         Vector3 rot = transform.localRotation.eulerAngles;
 
         movement.x = rot.x;
         movement.z = rot.z;
 
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            if (isPuaseGame)
+            {
+                PuaseGameToPlayerMovement(false);
+                openSound.Stop();
+            }
+            else
+            {
+                PuaseGameToPlayerMovement(true);
+                openSound.Play();
+            }
+        }
+
         PlayerMove();
     }
+
+
+    public void PuaseGameToPlayerMovement(bool isPuase)
+    {
+        Time.timeScale = isPuase ? 0 : 1;
+        puaseGame.gameObject.SetActive(isPuase);
+        isPuaseGame = isPuase;
+    }
+
 
 
 

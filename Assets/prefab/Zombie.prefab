@@ -589,7 +589,9 @@ MonoBehaviour:
   player: {fileID: 0}
   enemyAnimator: {fileID: 1288565588534116991}
   damang: 20
+  gameManager: {fileID: 0}
   health: 100
+  audio: {fileID: 0}
 --- !u!195 &8742237277080288915
 NavMeshAgent:
   m_ObjectHideFlags: 0

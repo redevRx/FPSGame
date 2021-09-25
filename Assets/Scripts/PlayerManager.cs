@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
 
     public GameManager GameManager;
 
+    public AudioSource audio;
+
     public void Hit(float damang)
     {
         health -= damang;
