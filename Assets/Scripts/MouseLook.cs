@@ -5,11 +5,12 @@ using UnityEngine;
 public class MouseLook : MonoBehaviour
 {
 
-    public float mouseSensitivity = 2f;
-   // public Transform playerBody;
+    public float mouseSensitivity = 100f;
+    public Transform playerBody;
+    public float xRotation = 0f;
 
-    private float rotY = 0.0f; // rotation around the up/y axis
-    private float rotX = 0.0f; // rotation around the right/x axis
+    public float rotY = 0.0f; // rotation around the up/y axis
+    public float rotX = 0.0f; // rotation around the right/x axis
 
 
     // Start is called before the first frame update
@@ -22,8 +23,35 @@ public class MouseLook : MonoBehaviour
     void Update()
     {
         MouseMove();
+        //JoyLook();
     }
 
+    private void TryMove()
+    {
+        rotX = Input.GetAxis("Mouse X") * mouseSensitivity;
+        rotY -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+
+     
+            //RotY
+            rotY = Mathf.Clamp(rotY, -90, 90);
+            Camera.main.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
+
+            //RotX
+            transform.Rotate(0, rotX, 0);
+        //playerBody.Rotate(Vector3.up * rotX);
+
+    }
+
+    private void MouseLooking() {
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        transform.rotation = Quaternion.Euler(xRotation,0f ,0f);
+        playerBody.rotation = Quaternion.Euler(xRotation, 0f, 0f);
+    }
 
  
     //code on video not working
@@ -41,7 +69,10 @@ public class MouseLook : MonoBehaviour
 
         Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
         transform.rotation = localRotation;
+        playerBody.Rotate(Vector3.up * mouseX * Time.deltaTime);
     }
+
+ 
 
   
 

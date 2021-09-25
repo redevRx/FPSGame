@@ -4,30 +4,37 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 4.5f;
-    [SerializeField] private float jumpHeight = 1.5f;
+    [SerializeField] public float moveSpeed = 4.5f;
+    [SerializeField] public float jumpHeight = 1.5f;
     
 
     private Vector3 velocity;
     private Vector3 movement;
+    [SerializeField] public Transform transformPlayer;
 
-    [SerializeField] private float gravity;
-    [SerializeField] private bool isGraounded;
-    [SerializeField] private float groundCheckDistance;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundMask;
+    [SerializeField] public float gravity;
+    [SerializeField] public bool isGraounded;
+    [SerializeField] public float groundCheckDistance;
+    [SerializeField] public Transform groundCheck;
+    [SerializeField] public LayerMask groundMask;
 
-    [SerializeField] private CharacterController characterController;
+    [SerializeField] public CharacterController characterController;
     // Start is called before the first frame update
     void Start()
     {
+      
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        Vector3 rot = transform.localRotation.eulerAngles;
 
-       PlayerMove();
+        movement.x = rot.x;
+        movement.z = rot.z;
+
+        PlayerMove();
     }
 
 
@@ -45,8 +52,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-         movement = new Vector3(Mathf.RoundToInt(Input.GetAxis("Horizontal")), 0, Mathf.RoundToInt(Input.GetAxis("Vertical"))).normalized;
-         characterController.Move(movement * Time.deltaTime * moveSpeed);
+         movement = new Vector3(Input.GetAxis("Horizontal"), 0,
+             Input.GetAxis("Vertical"));
+
+        characterController.Move(movement * Time.deltaTime * moveSpeed);
 
         // Changes the height position of the player..
         if (Input.GetButtonDown("Jump") && isGraounded)
@@ -54,9 +63,13 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
 
+        if (Input.GetButtonDown("ButtonA") && isGraounded)
+        {
+            Jump();
+        }
       
         velocity.y += gravity * Time.deltaTime;
-        characterController.Move(velocity);
+        characterController.Move(velocity * Time.deltaTime);
     }
 
 
