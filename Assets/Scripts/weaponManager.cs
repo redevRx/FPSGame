@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class weaponManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class weaponManager : MonoBehaviour
     [SerializeField] public GameObject mainCM;
     [SerializeField] public float range = 100f;
     [SerializeField] public float damang = 50f;
+
+    public Text txtDamang;
 
 
     [SerializeField] public Animator playerAnimator;
@@ -23,6 +26,7 @@ public class weaponManager : MonoBehaviour
         if (playerAnimator.GetBool("isShooting"))
         {
             playerAnimator.SetBool("isShooting", false);
+            txtDamang.text = "";
         }
 
 
@@ -50,6 +54,7 @@ public class weaponManager : MonoBehaviour
             if (enemy != null)
             {
                 enemy.Hit(damang);
+                txtDamang.text = damang.ToString();
             }
         }
     }
