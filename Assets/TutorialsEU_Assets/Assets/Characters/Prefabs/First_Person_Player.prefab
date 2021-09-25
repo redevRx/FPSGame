@@ -250,7 +250,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCM: {fileID: 7619562359303653734}
   range: 100
-  damang: 25
+  damang: 100
+  txtDamang: {fileID: 0}
   playerAnimator: {fileID: 3308283935566208020}
 --- !u!1 &2168140879310129477
 GameObject:
@@ -1006,6 +1007,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  txtHealth: {fileID: 0}
+  GameManager: {fileID: 0}
 --- !u!1 &7481196661884004689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,6 +1485,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 100
   playerBody: {fileID: 7445828018338741297}
+  xRotation: 0
+  rotY: 0
+  rotX: 0
 --- !u!114 &1338232654
 MonoBehaviour:
   m_ObjectHideFlags: 0
