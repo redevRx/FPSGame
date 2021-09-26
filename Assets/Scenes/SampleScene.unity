@@ -3236,9 +3236,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 100
   playerBody: {fileID: 0}
-  xRotation: 0
-  rotY: 0
-  rotX: 0
 --- !u!114 &384856364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9584,6 +9581,10 @@ PrefabInstance:
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 793390635}
+    - target: {fileID: 1623905267146250184, guid: d6834fe065295814d8d657cc943fffec, type: 3}
+      propertyPath: mouseSensitivity
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7431377008860728819, guid: d6834fe065295814d8d657cc943fffec, type: 3}
       propertyPath: m_Name
       value: First_Person_Player

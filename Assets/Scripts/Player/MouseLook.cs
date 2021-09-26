@@ -7,11 +7,16 @@ public class MouseLook : MonoBehaviour
 
     public float mouseSensitivity = 100f;
     public Transform playerBody;
-    public float xRotation = 0f;
+    private float xRotation = 0f;
 
-    public float rotY = 0.0f; // rotation around the up/y axis
-    public float rotX = 0.0f; // rotation around the right/x axis
+    private float rotY = 0.0f; // rotation around the up/y axis
+    private float rotX = 0.0f; // rotation around the right/x axis
 
+    private bool isLock;
+    //github code style
+    private Vector2 current_Mouse_Look;
+    private Vector2 look_Angles;
+    private Vector2 default_Look_Limits = new Vector2(-70f, 80f);
 
     // Start is called before the first frame update
     void Start()
@@ -22,25 +27,50 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MouseMove();
+        CheckMouseLock();
+        LookAround();
         //JoyLook();
     }
 
-    private void TryMove()
+
+    private void CheckMouseLock()
     {
-        rotX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        rotY -= Input.GetAxis("Mouse Y") * mouseSensitivity;
-
-     
-            //RotY
-            rotY = Mathf.Clamp(rotY, -90, 90);
-            Camera.main.transform.localRotation = Quaternion.Euler(rotY, 0, 0);
-
-            //RotX
-            transform.Rotate(0, rotX, 0);
-        //playerBody.Rotate(Vector3.up * rotX);
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isLock)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                isLock = !isLock;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                isLock = !isLock;
+            }
+        }
     }
+
+    //working code
+   private void LookAround()
+    {
+
+        current_Mouse_Look = new Vector2(
+            Input.GetAxis("Mouse Y"), Input.GetAxis("Mouse X"));
+
+        look_Angles.x += current_Mouse_Look.x * mouseSensitivity * (true ? 1f : -1f);
+        look_Angles.y += current_Mouse_Look.y * mouseSensitivity;
+
+        look_Angles.x = Mathf.Clamp(look_Angles.x, default_Look_Limits.x, default_Look_Limits.y);
+
+        //current_Roll_Angle =
+        //Mathf.Lerp(current_Roll_Angle, Input.GetAxisRaw(MouseAxis.MOUSE_X)
+        //* roll_Angle, Time.deltaTime * roll_Speed);
+
+        //transform.rotation = Quaternion.Euler(look_Angles.x, 0f, 0f);
+        playerBody.localRotation = Quaternion.Euler(0f, look_Angles.y, 0f);
+
+
+    } // look around
 
     private void MouseLooking() {
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
@@ -68,7 +98,7 @@ public class MouseLook : MonoBehaviour
         rotX = Mathf.Clamp(rotX, -80f, 80f);
 
         Quaternion localRotation = Quaternion.Euler(rotX, rotY, 0.0f);
-        transform.rotation = localRotation;
+     transform.rotation = localRotation;
         playerBody.Rotate(Vector3.up * mouseX * Time.deltaTime);
     }
 
@@ -79,6 +109,7 @@ public class MouseLook : MonoBehaviour
     private void LockMosue()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        isLock = true;
         Vector3 rot = transform.localRotation.eulerAngles;
         rotY = rot.y;
         rotX = rot.x;

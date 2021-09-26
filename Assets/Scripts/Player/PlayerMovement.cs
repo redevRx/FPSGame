@@ -87,7 +87,10 @@ public class PlayerMovement : MonoBehaviour
          movement = new Vector3(Input.GetAxis("Horizontal"), 0,
              Input.GetAxis("Vertical"));
 
-        characterController.Move(movement * Time.deltaTime * moveSpeed);
+        movement = transform.TransformDirection(movement);
+        movement *= moveSpeed * Time.deltaTime;
+
+        characterController.Move(movement);
 
         // Changes the height position of the player..
         if (Input.GetButtonDown("Jump") && isGraounded)
