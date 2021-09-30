@@ -7,24 +7,24 @@ public class KeqingAnimationController : MonoBehaviour
 
     public CharacterController player;
     public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
-        animator.SetBool("isReadyAgain", true);
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player.velocity.magnitude > 0.01f)
+      
+        if (transform.hasChanged)
         {
             //user moving
-            animator.SetBool("isReadyAgain", false);
             animator.SetBool("isMovement", true);
         }
         else
         {
-            animator.SetBool("isReadyAgain", true);
             animator.SetBool("isMovement", false);
         }
     }
